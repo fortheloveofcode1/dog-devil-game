@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    /* Prevent scrolling */
+    background-color: aqua;
+}
+
+.gameContainer {
+
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: 90vh;
+}
+
+.scooby {
+    background-image: url(dog.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.obstacle {
+    background-image: url(ball.png);
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.obstaclean {
+    animation: obstaclean 5s linear infinite
+}
+
+.animatescooby {
+    animation: scooby 0.8s linear;
+}
+
+.gameOver {
+    visibility: hidden;
+    position: absolute;
+    top: 60%;
+    right: 800px;
+    font-size: 50px;
+    border: 0.5px solid black;
+    padding: 50px;
+    background-color: red;
+
+}
+
+#scoreC {
+    font-size: 50px;
+    position: absolute;
+    right: 200px;
+    color: beige;
+    border: 0.1px solid black;
+    top: 113px;
+    background-color: rgb(135, 135, 201);
+}
+
+@keyframes scooby {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 400px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstaclean {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}

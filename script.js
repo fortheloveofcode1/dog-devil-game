@@ -2,7 +2,7 @@ let score = 0; // Declare and initialize score
 let cross = true;
 const jumpSound = new Audio('jump.wav');
 const gameOverSound = new Audio('gameover.wav');
-let scooby, gameOver, obstacle, scoreC;
+let scooby, obstacle;
 
 
 document.onkeydown = function (e) {
